@@ -1,0 +1,66 @@
+body{
+  background-color: hwb(196 38% 52%);
+}
+
+.menu{
+  background-color: #aaf;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.ell{
+  background-color: #88b;
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.cart{
+  border-radius: 40px;
+  width: 100%;
+}
+
+.s{
+  margin: 0px;
+}
+
+.bt{
+  background-color: hwb(0 48% 52%);
+  width: 35px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+.tx{
+  position: absolute;
+  margin: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+
+
+.panel{
+  position: fixed;
+  left: 20px;
+  top: 70px;
+  width: 300px;
+  background-color: hwb(190 10% 0% / 0.5);
+  transform: scale(1);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.panel.disabled {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+  transition: 0.5s;
+}
