@@ -13,11 +13,11 @@ document.addEventListener('keydown', (e) => {
 })
 
 document.getElementById("car").onclick = () => {
-  window.location.href = "/";
+  window.location.href = "/m/";
 }
 
 document.getElementById("pre").onclick = () => {
-  window.location.href = "/contemp";
+  window.location.href = "/m/contemp";
 }
 
 const pr = [
