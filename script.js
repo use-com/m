@@ -63,15 +63,6 @@ function pri(v=0,ii=0,ia=0,oi=0,oa=0) {
   return oi+(v-ii)*(oa-oi)/(ia-ii);
 }
 
-const width = document.querySelector(".cart").clientWidth;
-const height = document.querySelector(".cart").clientHeight;
-for (const { cls, x, y } of items) {
-  const el = document.querySelector("." + cls);
-  if (!el) continue;
-  el.style.left = (pri(x, 0, 1152, 0, width)) + "px";
-  el.style.top  = (pri(y, 0, 623, 0, height))+40 + "px";
-}
-
 function page(id=0) {
   let type = "";
   let idi = [];
@@ -184,9 +175,22 @@ document.querySelectorAll(".bt").forEach(btn => {
 })
 
 document.getElementById("car").onclick = () => {
-  window.location.href = "/";
+  window.location.href = "/m/";
 }
 
 document.getElementById("pre").onclick = () => {
-  window.location.href = "/contemp";
+  window.location.href = "/m/contemp";
 }
+
+function update() {
+  const width = document.querySelector(".cart").clientWidth;
+  const height = document.querySelector(".cart").clientHeight;
+  for (const { cls, x, y } of items) {
+    const el = document.querySelector("." + cls);
+    if (!el) continue;
+    el.style.left = (pri(x, 0, 1152, 0, width)) + "px";
+    el.style.top  = (pri(y, 0, 623, 0, height))+40 + "px";
+  }
+  requestAnimationFrame(update());
+}
+requestAnimationFrame(update());
