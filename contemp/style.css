@@ -1,0 +1,22 @@
+body{
+  background-color: #99d;
+}
+
+.menu{
+  background-color: #aaf;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.ell{
+  background-color: #88b;
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
